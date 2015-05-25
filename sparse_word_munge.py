@@ -11,8 +11,4 @@ with open("Sparse_Word_0.txt") as tsv:
 
 
 
-'''
-for iter in range(0,5):
-    print "this is number %d" % iter
-'''
 
