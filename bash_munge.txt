@@ -1,4 +1,4 @@
-# Following was run on WordCount folder
+# Following was run on WordCount folder from bash CLI
 
 # Transforms all blank spaces to tabs
 for i in *.txt; do tr ' ' '\t' < "$i" > "test$i"; done
