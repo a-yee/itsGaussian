@@ -1,0 +1,5 @@
+# Following was run on WordCount folder
+
+# Transforms all blank spaces to tabs
+for i in *.txt; do tr ' ' '\t' < "$i" > "test$i"; done
+
