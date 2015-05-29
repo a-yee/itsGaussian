@@ -1,0 +1,11 @@
+#http://www.uoguelph.ca/~wdarling/tm/enron.html
+game	7918
+yard	20880
+defense	3548	
+allowed	2727
+fantasy	15431
+point	1200
+passing	12767
+rank	8183
+commissioner	407	
+team	1125
