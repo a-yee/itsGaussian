@@ -159,3 +159,27 @@ vec <- c(vec,test2)
 # e.g.
 vec <- c(vec,t)
 
+# extension of code above but looping and outputing to file
+indexExtract <- function(s){
+  temp <- sapply(s,function(s) which(apply(DF==s,1,any)));
+  write.csv("")
+}
+
+# change to row version 
+rbind.fill <- function(...){
+  nm <- list(...) 
+  nm <- lapply(nm, as.matrix)
+  n <- max(sapply(nm, ncol)) 
+  do.call(cbind, lapply(nm, function (x) 
+    rbind(x, matrix(, n-nrow(x), ncol(x))))) 
+}
+
+test4 <- as.data.frame(test2)
+library(plyr)
+df <- data.frame(Row=as.numeric())
+df <- rbind(df,test2)
+df <- t(df)
+k <- c(1:10)
+k = as.data.frame(k, Row=as.numeric())
+df <- rbind(df,k)
+?as.data.frame
