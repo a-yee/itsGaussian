@@ -1,0 +1,28 @@
+file: uni_emails.mat: 
+    {a cell array of all unique sender emails generated from the fb_index file;
+        represents the unique emailers latent within set of all emails flagged 
+        suspect of fantasy football (i.e. the emails indexed by fb_index) } 
+
+file: fb_uniFreq.csv: 
+    {a 5014x2 matrix holding 1:5014 in the first column; second column holds the 
+        frequency of the emails sent by email usr saved in uni_emails.mat
+        match the email to its frequency by call to uniques{fb_uniFreq[i,1],1};
+        remark: in matlab will be stored in variable called "uniques"}
+
+file: recip.csv: 
+    {a csv column in the following format: "row_number,email/string"; the emails
+        and strings represented here are all the unique char strings found as 
+        addressee of {TO,BCC,CC} from Metadata. Contains the unique list of ppl that 
+        received email and various erroneous strings such as TO, BCC, " ", CC because
+        of data dirtiness. }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Implementation Notes:
+1. created fb_uniFreq.csv and uni_emails.mat from count_unique.m function (cite
+        online source)
+
+2. row index extraction (single string) from {http://stackoverflow.com/questions/29932085/find-the-index-of-the-row-in-data-frame-that-contain-one-element-in-a-string-vec}
+
+3. cbind.fill function from {http://stackoverflow.com/questions/7962267/cbind-a-df-with-an-empty-df-cbind-fill/7962286#7962286}
+
+
